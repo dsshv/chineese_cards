@@ -7,16 +7,17 @@ type hieroglyph = {
     hskLevel: number
 }
 
-const partsOfSpeech : {[key:number] : string} = {
+export const partsOfSpeech : {[key:number] : string} = {
     1 : "adjective",
     2 : "adverb",
     3 : "verb"
 };
 
-function getPartOfSpeech(keys: number[]){
-    let result = [];
-    for (let i in keys) {
-        if (i in partsOfSpeech){
+export function getPartOfSpeech(keys: number[]){
+    let result : string[] = [];
+    for (let i of keys) {
+        //console.log(i)
+        if (i  in partsOfSpeech){
             result.push(partsOfSpeech[i])
         }
     }
@@ -48,3 +49,6 @@ let h_00000002: hieroglyph = {
     partsOfSpeech: getPartOfSpeech([3]),
     hskLevel: 1
 }
+
+console.log(h_00000001.partsOfSpeech)
+console.log(h_00000002.partsOfSpeech)
