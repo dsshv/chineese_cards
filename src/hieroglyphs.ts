@@ -24,18 +24,18 @@ export function getPartOfSpeech(keys: number[]){
     return result;
 }
 
-let h_00000001: hieroglyph = {
+export let h_00000001: hieroglyph = {
     id: 0x1,
     character: '好',
     translate: 'хороший',
     pinyin: ['hǎo', 'hào'],
     partsOfSpeech: getPartOfSpeech([1, 2, 3]),
     hskLevel: 1
-}
+}; // 好
 
-let h_00000002: hieroglyph = {
+export let h_00000002: hieroglyph = {
     id: 0x2,
-    character: '',
+    character: '叫',
     translate: [
         'звать',
         'кричать',
@@ -48,7 +48,7 @@ let h_00000002: hieroglyph = {
     pinyin: 'jiào',
     partsOfSpeech: getPartOfSpeech([3]),
     hskLevel: 1
-}
+} // 叫
 
 console.log(h_00000001.partsOfSpeech)
 console.log(h_00000002.partsOfSpeech)
